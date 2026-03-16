@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Goodnight My Love 💖</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+    font-family: 'Segoe UI', sans-serif;
+    overflow:hidden;
+    color:white;
+}
+
+.container{
+    text-align:center;
+    max-width:600px;
+    padding:40px;
+    background:rgba(0,0,0,0.4);
+    border-radius:20px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 0 20px rgba(255,0,100,0.5);
+}
+
+h1{
+    font-size:40px;
+    color:#ff7aa2;
+    text-shadow:0 0 10px #ff4d88;
+}
+
+.message{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.love{
+    margin-top:20px;
+    font-size:24px;
+    color:#ff4d88;
+    font-weight:bold;
+    text-shadow:0 0 10px #ff4d88;
+}
+
+/* Kiss animation */
+
+.kiss{
+    position:absolute;
+    font-size:30px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(0.5);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Good Night My Love 💖</h1>
+
+<div class="message">
+Tonight as the moon shines softly in the sky 🌙<br>
+I wish I could hold you close and kiss you goodnight 💋<br>
+Your smile lives in my heart every second ❤️<br>
+Even the stars look dull compared to your beauty ✨<br>
+You are the sweetest dream my life has ever known 🌹<br>
+Every heartbeat whispers your name tonight 💞<br>
+Distance can't stop my love from reaching you 💫<br>
+Sleep peacefully knowing someone loves you deeply 🥺<br>
+And that someone is me, forever and always 💕
+</div>
+
+<div class="love">
+I Love You So Much 💋💋💋
+</div>
+
+</div>
+
+<!-- Floating kisses -->
+
+<script>
+function createKiss(){
+    const kiss=document.createElement("div");
+    kiss.classList.add("kiss");
+    kiss.innerHTML="💋";
+
+    kiss.style.left=Math.random()*100+"vw";
+    kiss.style.animationDuration=(Math.random()*5+5)+"s";
+    kiss.style.fontSize=(Math.random()*20+20)+"px";
+
+    document.body.appendChild(kiss);
+
+    setTimeout(()=>{
+        kiss.remove();
+    },8000);
+}
+
+setInterval(createKiss,300);
+</script>
+
+</body>
+</html>
